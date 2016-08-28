@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         // Adding Toolbar to Main screen
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         appBarTextView = (TextView) findViewById(R.id.main_textview_title);
         TextView currentDayTextView = (TextView) findViewById(R.id.day_name);
