@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lesson Schedule</string>
+    <string name="app_name"></string>
     <string name="no_data_available">В этот день нет занятий</string>
     <string name="main_no_lesson">Нет занятий</string>
     <string name="loading_start">Загрузка началась</string>

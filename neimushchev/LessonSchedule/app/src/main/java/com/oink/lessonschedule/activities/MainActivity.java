@@ -49,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
     String[] sixthBuildingTime;
 
     private JSONArray jsonDayArray;
-    private RecyclerView dayRecyclerView;
 
+
+    private TextView appBarTextView;
     private TextView lessonLabel;
     private TextView lessonName;
     private TextView lessonAdditionalInfo;
@@ -65,12 +66,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState != null) {
-            isCurrentLesson = savedInstanceState.getBoolean("isCurrentLesson");
-        }
-        else {
-            isCurrentLesson = false;
-        }
+        isCurrentLesson = savedInstanceState != null && savedInstanceState.getBoolean("isCurrentLesson");
 
         setContentView(R.layout.activity_main);
         coordinatorLayout = (CoordinatorLayout) findViewById(R.id.main_coordinator_layout);
@@ -94,7 +90,13 @@ public class MainActivity extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle(R.string.schedule);
+        appBarTextView = (TextView) findViewById(R.id.main_textview_title);
+        TextView currentDayTextView = (TextView) findViewById(R.id.day_name);
+        try {
+            currentDayTextView.setText(jsonDayArray.getJSONObject(getCurrentDay()).getString("name"));
+        } catch (JSONException e) {
+            currentDayTextView.setText("Расписание");
+        }
 
         getLessonViews();
         setupLesson(isCurrentLesson);
@@ -114,8 +116,7 @@ public class MainActivity extends AppCompatActivity {
         //Reading from .json file
         String rawData = convertStreamToString(jsonInputStream);
         JSONObject jsonObject = new JSONObject(rawData);
-        JSONArray jsonArray = jsonObject.getJSONArray(getString(R.string.json_days));
-        return jsonArray;
+        return jsonObject.getJSONArray(getString(R.string.json_days));
     }
 
     private void writeJsonToFile(String string) {
@@ -152,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView() {
-        dayRecyclerView = (RecyclerView) findViewById(R.id.day_recycler_view);
+        RecyclerView dayRecyclerView = (RecyclerView) findViewById(R.id.day_recycler_view);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         dayRecyclerView.setLayoutManager(layoutManager);
@@ -163,11 +164,17 @@ public class MainActivity extends AppCompatActivity {
         dayRecyclerView.addItemDecoration(new DividerItemDecoration(this));
     }
 
-    private void setupLesson(boolean current) {
+    private int getCurrentDay() {
         Calendar c = Calendar.getInstance();
         int day = c.get(Calendar.DAY_OF_WEEK);
         day -= 2;
         if (day < 0) day = DAYS_IN_WEEK - 1;
+        return day;
+    }
+
+    private void setupLesson(boolean current) {
+        Calendar c = Calendar.getInstance();
+        int day = getCurrentDay();
 
         JSONArray lessons;
         try {
@@ -356,14 +363,18 @@ public class MainActivity extends AppCompatActivity {
         AppBarLayout appbarLayout = (AppBarLayout) findViewById(R.id.appbar_container);
         assert appbarLayout != null;
         appbarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            final float START_FADE_BORDER = 0.8f;
+            final float START_FADE_BORDER = 0.5f;
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 float percentage = 1 - ((float) Math.abs(verticalOffset) / appBarLayout.getTotalScrollRange());
                 if (percentage > START_FADE_BORDER) {
                     currentLessonLayout.setAlpha((percentage - START_FADE_BORDER) / (1 - percentage));
+                    appBarTextView.setAlpha(1 - (percentage - START_FADE_BORDER) / (1 - percentage));
                 }
-                else currentLessonLayout.setAlpha(0);
+                else {
+                    currentLessonLayout.setAlpha(0);
+                    appBarTextView.setAlpha(1);
+                }
             }
         });
     }

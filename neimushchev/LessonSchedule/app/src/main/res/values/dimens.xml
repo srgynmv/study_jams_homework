@@ -8,7 +8,7 @@
     <dimen name="ctl_margin_right">48dp</dimen>
     <dimen name="ctl_margin_top">0dp</dimen>
     <dimen name="ctl_margin_bottom">0dp</dimen>
-    <dimen name="ctl_layout_padding_top">104dp</dimen>
+    <dimen name="ctl_layout_padding_top">32dp</dimen>
     <dimen name="ctl_layout_padding_bottom">32dp</dimen>
     <dimen name="ctl_layout_padding_left">32dp</dimen>
     <dimen name="ctl_layout_padding_right">32dp</dimen>
