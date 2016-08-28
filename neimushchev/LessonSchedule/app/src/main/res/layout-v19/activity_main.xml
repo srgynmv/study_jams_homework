@@ -46,7 +46,6 @@
                     android:paddingStart="@dimen/item_horizontal_margin"
                     android:paddingEnd="@dimen/item_horizontal_margin"
                     android:textSize="36sp"
-                    android:text="Понедельник"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
                 <TextView
                     android:id="@+id/lesson_label"
