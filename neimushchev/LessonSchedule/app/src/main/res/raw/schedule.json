@@ -4,250 +4,208 @@
       "name":"Понедельник",
       "lessonsEven": [
         {
-          "name": "Физкультура",
-          "number": 1,
-          "additionalInfo": "",
-          "classroom": "Спортзал 6 корпуса",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Метрология, стандартизация и сертификация",
+          "name": "Информационные технологии в системах управления",
           "number": 2,
-          "additionalInfo": "Лекция",
-          "classroom": "6320",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Социология и политология",
-          "number": 3,
-          "additionalInfo": "Лекция",
-          "classroom": "6520",
-          "inSixthBuilding": true
+          "additionalInfo": "Лекция\nМиндров Александр Евгеньевич",
+          "classroom": "4303",
+          "inSixthBuilding": false
         }
       ],
       "lessonsOdd": [
         {
-          "name": "Физкультура",
-          "number": 1,
-          "additionalInfo": "",
-          "classroom": "Спортзал 6 корпуса",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Метрология, стандартизация и сертификация",
+          "name": "Информационные технологии в системах управления",
           "number": 2,
-          "additionalInfo": "Лекция",
-          "classroom": "6320",
-          "inSixthBuilding": true
+          "additionalInfo": "Лекция\nМиндров Александр Евгеньевич",
+          "classroom": "4303",
+          "inSixthBuilding": false
         },
         {
-          "name": "Социология и политология",
+          "name": "Сети и телекоммуникации",
           "number": 3,
-          "additionalInfo": "Лекция",
-          "classroom": "6520",
-          "inSixthBuilding": true
+          "additionalInfo": "Лабораторные работы\n1 пг. - 3, 7, 11, 15;\n2 пг - 5, 9, 13, 17\nЗеленский Владимир Павлович",
+          "classroom": "5412",
+          "inSixthBuilding": false
         },
         {
-          "name": "Социология и политология",
+          "name": "Сети и телекоммуникации",
           "number": 4,
-          "additionalInfo": "Семинар",
-          "classroom": "6520",
-          "inSixthBuilding": true
+          "additionalInfo": "Лабораторные работы\n1 пг. - 3, 7, 11, 15;\n2 пг - 5, 9, 13, 17\nЗеленский Владимир Павлович",
+          "classroom": "5412",
+          "inSixthBuilding": false
         }
       ]
     },
     {
-      "name":"Вторник",
-      "lessonsEven": [
-        {
-          "name": "Английский язык",
-          "number": 3,
-          "additionalInfo": "Практика",
-          "classroom": "6505 / 6506",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Теория конечных автоматов",
-          "number": 4,
-          "additionalInfo": "Лекция",
-          "classroom": "6417",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Теория конечных автоматов",
-          "number": 5,
-          "additionalInfo": "Практика",
-          "classroom": "6417",
-          "inSixthBuilding": true
-        }
-      ],
-      "lessonsOdd": [
-        {
-          "name": "Английский язык",
-          "number": 3,
-          "additionalInfo": "Практика",
-          "classroom": "6505 / 6506",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Теория конечных автоматов",
-          "number": 4,
-          "additionalInfo": "Лекция",
-          "classroom": "6417",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Теория конечных автоматов",
-          "number": 5,
-          "additionalInfo": "Практика",
-          "classroom": "6417",
-          "inSixthBuilding": true
-        },
-        {
-          "name": "Язык программирования Java",
-          "number": 6,
-          "additionalInfo": "Лекция",
-          "classroom": "6417",
-          "inSixthBuilding": true
-        }
-      ]
+    	"name":"Вторник",
+  	"lessonsEven": [
+      	],
+      	"lessonsOdd": [
+      	]	
     },
     {
-      "name":"Среда",
-      "lessonsEven": [
+	"name":"Среда",
+	"lessonsEven": [
         {
-          "name": "Физкультура",
+          "name": "Математические модели в АСОиУ",
           "number": 1,
-          "additionalInfo": "",
-          "classroom": "Спортзал 4 корпуса",
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nМартынюк Михаил Владимирович",
+          "classroom": "4403",
           "inSixthBuilding": false
         },
         {
-          "name": "Технологии программирования",
+          "name": "Математические модели в АСОиУ",
           "number": 2,
-          "additionalInfo": "Лекция",
-          "classroom": "4408",
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nМартынюк Михаил Владимирович",
+          "classroom": "4403",
           "inSixthBuilding": false
         },
         {
-          "name": "Язык программирования Java",
+          "name": "Банки и базы данных",
           "number": 3,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4404",
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nАндреева Ольга Вячеславовна",
+          "classroom": "4403",
           "inSixthBuilding": false
         },
         {
-          "name": "Язык программирования Java",
+          "name": "Банки и базы данных",
           "number": 4,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4404",
-          "inSixthBuilding": false
-        }
-      ],
-      "lessonsOdd": [
-        {
-          "name": "Физкультура",
-          "number": 1,
-          "additionalInfo": "",
-          "classroom": "Спортзал 4 корпуса",
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nАндреева Ольга Вячеславовна",
+          "classroom": "4403",
           "inSixthBuilding": false
         },
-        {
-          "name": "Технологии программирования",
-          "number": 2,
-          "additionalInfo": "Лекция",
-          "classroom": "4408",
-          "inSixthBuilding": false
-        },
-        {
-          "name": "Электротехника",
-          "number": 3,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4308",
-          "inSixthBuilding": false
-        },
-        {
-          "name": "Электротехника",
-          "number": 4,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4308",
-          "inSixthBuilding": false
-        },
-        {
-          "name": "Технологии программирования",
+	{
+          "name": "Системное программное обеспечение",
           "number": 5,
-          "additionalInfo": "Лабораторные работы",
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nЛяхманов Дмитрий Александрович",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+	{
+          "name": "Системное программное обеспечение",
+          "number": 6,
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nЛяхманов Дмитрий Александрович",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        }
+	],
+	"lessonsOdd": [
+        {
+          "name": "Математические модели в АСОиУ",
+          "number": 1,
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nМартынюк Михаил Владимирович",
           "classroom": "4403",
           "inSixthBuilding": false
         },
         {
-          "name": "Технологии программирования",
+          "name": "Математические модели в АСОиУ",
+          "number": 2,
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nМартынюк Михаил Владимирович",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+        {
+          "name": "Банки и базы данных",
+          "number": 3,
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nАндреева Ольга Вячеславовна",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+        {
+          "name": "Банки и базы данных",
+          "number": 4,
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nАндреева Ольга Вячеславовна",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+	{
+          "name": "Системное программное обеспечение",
+          "number": 5,
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nЛяхманов Дмитрий Александрович",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+	{
+          "name": "Системное программное обеспечение",
           "number": 6,
-          "additionalInfo": "Лабораторные работы",
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nЛяхманов Дмитрий Александрович",
           "classroom": "4403",
           "inSixthBuilding": false
         }
-      ]
+	]
     },
     {
       "name":"Четверг",
       "lessonsEven": [
         {
-          "name": "Электротехника",
-          "number": 1,
-          "additionalInfo": "Лекция",
-          "classroom": "3301",
-          "inSixthBuilding": false
-        },
-        {
-          "name": "Физика",
+          "name": "Физкультура",
           "number": 2,
-          "additionalInfo": "Лекция",
-          "classroom": "5303",
+          "additionalInfo": "",
+          "classroom": "Спортзал 4 корпуса",
           "inSixthBuilding": false
         },
         {
-          "name": "Схемотехника",
+          "name": "Операционные системы",
           "number": 3,
-          "additionalInfo": "Лекция",
-          "classroom": "3309",
+          "additionalInfo": "Лекция\nТюрин Артем Игоревич",
+          "classroom": "4408",
           "inSixthBuilding": false
         },
         {
-          "name": "Численные методы в АСОиУ",
+          "name": "Математическое моделирование в АСОиУ",
           "number": 4,
-          "additionalInfo": "Лекция",
-          "classroom": "4408",
+          "additionalInfo": "Лекция\nМартынюк Михаил Владимирович",
+          "classroom": "1351",
+          "inSixthBuilding": false
+        },
+        {
+          "name": "Операционные системы",
+          "number": 5,
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nКобляков Дмитрий Александрович",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+	{
+          "name": "Операционные системы",
+          "number": 6,
+          "additionalInfo": "Лабораторные работы\n2 подгруппа\nКобляков Дмитрий Александрович",
+          "classroom": "4403",
           "inSixthBuilding": false
         }
       ],
       "lessonsOdd": [
-        {
-          "name": "Электротехника",
-          "number": 1,
-          "additionalInfo": "Лекция",
-          "classroom": "3301",
-          "inSixthBuilding": false
-        },
-        {
-          "name": "Физика",
+               {
+          "name": "Физкультура",
           "number": 2,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "5303",
+          "additionalInfo": "",
+          "classroom": "Спортзал 4 корпуса",
           "inSixthBuilding": false
         },
         {
-          "name": "Численные методы в АСОиУ",
-          "number": 4,
-          "additionalInfo": "Практика",
+          "name": "Операционные системы",
+          "number": 3,
+          "additionalInfo": "Лекция\nТюрин Артем Игоревич",
           "classroom": "4408",
           "inSixthBuilding": false
         },
         {
-          "name": "Численные методы в АСОиУ",
+          "name": "Математическое моделирование в АСОиУ",
           "number": 4,
-          "additionalInfo": "Лекция",
-          "classroom": "4408",
+          "additionalInfo": "Лекция\nМартынюк Михаил Владимирович",
+          "classroom": "1351",
+          "inSixthBuilding": false
+        },
+        {
+          "name": "Операционные системы",
+          "number": 5,
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nКобляков Дмитрий Александрович",
+          "classroom": "4403",
+          "inSixthBuilding": false
+        },
+		{
+          "name": "Операционные системы",
+          "number": 6,
+          "additionalInfo": "Лабораторные работы\n1 подгруппа\nКобляков Дмитрий Александрович",
+          "classroom": "4403",
           "inSixthBuilding": false
         }
       ]
@@ -256,57 +214,92 @@
       "name":"Пятница",
       "lessonsEven": [
         {
-          "name": "Численные методы в АСОиУ",
-          "number": 1,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4403",
-          "inSixthBuilding": false
-        },
-        {
-          "name": "Численные методы в АСОиУ",
+          "name": "Экономика",
           "number": 2,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4403",
-          "inSixthBuilding": false
+          "additionalInfo": "Практика",
+          "classroom": "6325",
+          "inSixthBuilding": true
         },
         {
-          "name": "Метрология, стандартизация и сертификация",
+          "name": "Экономика",
           "number": 3,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4405",
-          "inSixthBuilding": false
+          "additionalInfo": "Лекция",
+          "classroom": "6325",
+          "inSixthBuilding": true
         },
         {
-          "name": "Метрология, стандартизация и сертификация",
+          "name": "Сети и телекоммуникации",
           "number": 4,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4405",
-          "inSixthBuilding": false
+          "additionalInfo": "Лекция\nЗеленский Владимир Павлович",
+          "classroom": "6320",
+          "inSixthBuilding": true
+        },
+        {
+          "name": "Банки и базы данных",
+          "number": 5,
+          "additionalInfo": "Лекция",
+          "classroom": "6320",
+          "inSixthBuilding": true
         }
       ],
       "lessonsOdd": [
         {
-          "name": "Схемотехника",
-          "number": 1,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4403",
-          "inSixthBuilding": false
+          "name": "Экономика",
+          "number": 3,
+          "additionalInfo": "Лекция",
+          "classroom": "6325",
+          "inSixthBuilding": true
         },
         {
-          "name": "Схемотехника",
-          "number": 2,
-          "additionalInfo": "Лабораторные работы",
-          "classroom": "4403",
-          "inSixthBuilding": false
+          "name": "Сети и телекоммуникации",
+          "number": 4,
+          "additionalInfo": "Лекция\nЗеленский Владимир Павлович",
+          "classroom": "6320",
+          "inSixthBuilding": true
+        },
+        {
+          "name": "Банки и базы данных",
+          "number": 5,
+          "additionalInfo": "Лекция",
+          "classroom": "6320",
+          "inSixthBuilding": true
         }
-      ]
+		]
     },
     {
       "name":"Суббота",
       "lessonsEven": [
+		{
+          "name": "Системное программное обеспечение",
+          "number": 1,
+          "additionalInfo": "Лекция\nЛяхманов Дмитрий Александрович",
+          "classroom": "4408",
+          "inSixthBuilding": false
+        }
       ],
       "lessonsOdd": [
-      ]
+		{
+          "name": "Системное программное обеспечение",
+          "number": 1,
+          "additionalInfo": "Лекция\nЛяхманов Дмитрий Александрович",
+          "classroom": "4408",
+          "inSixthBuilding": false
+        },
+        {
+          "name": "Информационные технологии в системах управления",
+          "number": 2,
+          "additionalInfo": "Лабораторные работы\n1 пг. - 3, 7, 11, 15;\n2 пг - 5, 9, 13, 17\nМиндров Александр Евгеньевич",
+          "classroom": "",
+          "inSixthBuilding": false
+        },
+        {
+          "name": "Информационные технологии в системах управления",
+          "number": 3,
+          "additionalInfo": "Лабораторные работы\n1 пг. - 3, 7, 11, 15;\n2 пг - 5, 9, 13, 17\nМиндров Александр Евгеньевич",
+          "classroom": "",
+          "inSixthBuilding": false
+        }
+	  ]
     },
     {
       "name":"Воскресенье",

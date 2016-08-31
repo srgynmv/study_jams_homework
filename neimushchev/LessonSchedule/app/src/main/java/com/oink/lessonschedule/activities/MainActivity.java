@@ -27,6 +27,8 @@ import com.oink.lessonschedule.adapters.DayRecyclerAdapter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,7 +40,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView lessonAdditionalInfo;
     private TextView lessonClassroom;
     private TextView lessonTime;
+    private TextView weekNumberLabel;
     private LinearLayout currentLessonLayout;
 
     boolean isCurrentLesson;
@@ -92,11 +95,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         appBarTextView = (TextView) findViewById(R.id.main_textview_title);
-        TextView currentDayTextView = (TextView) findViewById(R.id.day_name);
+        TextView currentDayLabel = (TextView) findViewById(R.id.day_name);
+        weekNumberLabel = (TextView) findViewById(R.id.week_number);
         try {
-            currentDayTextView.setText(jsonDayArray.getJSONObject(getCurrentDay()).getString("name"));
+            currentDayLabel.setText(jsonDayArray.getJSONObject(getCurrentDay()).getString("name"));
         } catch (JSONException e) {
-            currentDayTextView.setText("Расписание");
+            currentDayLabel.setText("Расписание");
         }
 
         getLessonViews();
@@ -166,23 +170,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int getCurrentDay() {
-        Calendar c = Calendar.getInstance();
-        int day = c.get(Calendar.DAY_OF_WEEK);
+        GregorianCalendar c = new GregorianCalendar();
+        int day = c.get(GregorianCalendar.DAY_OF_WEEK);
         day -= 2;
         if (day < 0) day = DAYS_IN_WEEK - 1;
         return day;
     }
 
     private void setupLesson(boolean current) {
-        Calendar c = Calendar.getInstance();
-        int day = getCurrentDay();
+        GregorianCalendar c = new GregorianCalendar();
+        int currentMonth = c.get(GregorianCalendar.MONTH);
+        int currentYear = c.get(GregorianCalendar.YEAR);
+        int currentDay = getCurrentDay();
+
+        GregorianCalendar sept = new GregorianCalendar((currentMonth >= GregorianCalendar.SEPTEMBER ? currentYear : currentYear - 1), GregorianCalendar.SEPTEMBER, 1);
+        int studyWeek = c.get(GregorianCalendar.WEEK_OF_YEAR) - sept.get(GregorianCalendar.WEEK_OF_YEAR) + 1;
+        if (studyWeek < 1) studyWeek += new GregorianCalendar(currentYear - 1, GregorianCalendar.DECEMBER, 31).get(GregorianCalendar.WEEK_OF_YEAR);
+        weekNumberLabel.setText(getString(R.string.week) + Integer.toString(studyWeek));
 
         JSONArray lessons;
         try {
-            if (c.get(Calendar.WEEK_OF_YEAR) % 2 == 0) {
-                lessons = jsonDayArray.getJSONObject(day).getJSONArray(getString(R.string.json_lesson_even));
+            if (studyWeek % 2 == 0) {
+                lessons = jsonDayArray.getJSONObject(currentDay).getJSONArray(getString(R.string.json_lesson_even));
             } else {
-                lessons = jsonDayArray.getJSONObject(day).getJSONArray(getString(R.string.json_lesson_odd));
+                lessons = jsonDayArray.getJSONObject(currentDay).getJSONArray(getString(R.string.json_lesson_odd));
             }
             SimpleDateFormat sdf = new SimpleDateFormat(getString(R.string.time_format));
             String currentTime = sdf.format(new Date());
@@ -192,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 lessonLabel.setText(R.string.next_lesson_label);
                 setLessonsViewVisibility(View.VISIBLE);
-                setupNextLesson(lessons, day, c.get(Calendar.WEEK_OF_YEAR) % 2 == 0, currentTime);
+                setupNextLesson(lessons, currentDay, studyWeek % 2 == 0, currentTime);
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -430,7 +441,8 @@ public class MainActivity extends AppCompatActivity {
                 adapter.setJsonArray(jsonDayArray);
                 writeJsonToFile(json);
             } catch (IOException | JSONException e) {
-                Log.e("Download", "Broken connection");
+                Log.e("Download", "Broken download:");
+                e.printStackTrace();
                 return false;
             }
             return true;

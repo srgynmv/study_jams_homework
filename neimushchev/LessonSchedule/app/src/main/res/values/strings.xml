@@ -27,6 +27,9 @@
     <string name="lesson_additional_info_placeholder">Lesson additional info</string>
     <string name="lesson_classroom_placeholder">Lesson classroom</string>
     <string name="lesson_time_placeholder">Lesson time</string>
+    <string name="day_name_placeholder">Понедельник</string>
+    <string name="week">Неделя №</string>
+    <string name="week_number_placeholder">Неделя №36</string>
     <string-array name="first_building_time">
         <item>07:30 – 09:05</item>
         <item>09:20 – 10:55</item>
